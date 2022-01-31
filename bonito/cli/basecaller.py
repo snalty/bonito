@@ -62,7 +62,7 @@ def main(args):
 
     if args.reference:
         sys.stderr.write("> loading reference\n")
-        aligner = Aligner(args.reference, preset='ont-map', best_n=1)
+        aligner = Aligner(args.reference, preset='map-ont', best_n=1)
         if not aligner:
             sys.stderr.write("> failed to load/build index\n")
             exit(1)
@@ -98,7 +98,8 @@ def main(args):
         read_ids=column_to_set(args.read_ids), skip=args.skip,
         cancel=process_cancel()
     )
-
+    
+    
     if args.max_reads:
         reads = take(reads, args.max_reads)
 
