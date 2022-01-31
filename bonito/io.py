@@ -451,7 +451,7 @@ class CTCWriter(Thread):
     """
     def __init__(
             self, mode, iterator, aligner, fd=sys.stdout, min_coverage=0.90,
-            min_accuracy=0.99, ref_fn=None, groups=None, group_key=None,
+            min_accuracy=0.90, ref_fn=None, groups=None, group_key=None,
     ):
         super().__init__()
         self.fd = fd
