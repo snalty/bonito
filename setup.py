@@ -16,6 +16,7 @@ else:
 
 
 CUDA_VERSION = os.environ.get('CUDA_VERSION')
+print(CUDA_VERSION)
 assert(CUDA_VERSION in {'111', '113', None})
 
 
