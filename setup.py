@@ -16,7 +16,11 @@ else:
 
 
 CUDA_VERSION = os.environ.get('CUDA_VERSION')
-print(CUDA_VERSION)
+
+# Normalise cuda version for docker
+if CUDA_VERSION == '11.3.0':
+    CUDA_VERSION = '113'
+
 assert(CUDA_VERSION in {'111', '113', None})
 
 
